@@ -1,0 +1,25 @@
+services:
+  postgres-db:
+    image: postgres:latest
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: "123"
+      POSTGRES_DB: my_database
+    ports:
+      - "5432:5432" # Mapeia a porta 5432 do host para o container
+    volumes:
+      - postgres-data:/var/lib/postgresql/data # Monta o volume para persistir dados
+
+  php-apache:
+    build: .
+    container_name: php-apache-aws
+    ports:
+      - "8080:80" # Mapeia a porta 8080 do host para a porta 80 do container
+    volumes:
+      - ./meu-app:/var/www/html # Monta o diretório da aplicação local para o container
+    depends_on:
+      - postgres-db # Garante que o PHP espera o PostgreSQL estar disponível
+
+volumes:
+  postgres-data: # Define um volume nomeado para o PostgreSQL

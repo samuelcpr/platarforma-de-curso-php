@@ -1,0 +1,100 @@
+/* Reset básico para garantir que todos os elementos tenham margens e preenchimentos consistentes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Cor de fundo suave */
+  color: #333; /* Cor do texto */
+  padding: 20px;
+  height: 100vh; /* Altura total da tela */
+  overflow: hidden; /* Oculta qualquer overflow */
+}
+
+/* Cabeçalho */
+h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  color: #e50914; /* Cor do título */
+}
+
+/* Layout principal usando flexbox */
+.container {
+  display: flex; /* Usar flexbox para layout */
+  height: calc(100vh - 60px); /* Altura total menos a altura do cabeçalho */
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Estilo da lista de títulos dos vídeos */
+.video-list {
+  flex: 1; /* A lista ocupa o lado esquerdo */
+  background-color: #fff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  max-width: 300px; /* Largura máxima da lista */
+  overflow-y: auto; /* Permitir rolagem se necessário */
+}
+
+/* Estilo de cada título de vídeo */
+.video-title {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+  transition: background-color 0.2s; /* Transição suave */
+}
+
+.video-title:hover {
+  background-color: #f0f0f0; /* Fundo ao passar o mouse */
+}
+
+/* Estilo do espaço de exibição de vídeo */
+.video-detail {
+  flex: 3; /* O espaço de exibição ocupa o lado direito */
+  background-color: #fff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  display: flex; /* Para centralizar o conteúdo */
+  flex-direction: column; /* Coluna para título, vídeo e descrição */
+}
+
+/* Estilo do vídeo na área de detalhes */
+#videoPlayer {
+  width: 80%; /* Largura total para o vídeo */
+  height: 60%; /* Altura automática para manter a proporção */
+}
+
+/* Estilo do botão de exclusão */
+button {
+  background-color: #dc3545; /* Cor de fundo do botão de exclusão */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 5px 10px; /* Espaçamento interno do botão */
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor pointer para indicar que é clicável */
+}
+
+/* Estilo do botão de fechar do modal */
+.close {
+  color: #aaa; /* Cor do texto */
+  float: right; /* Alinha à direita */
+  font-size: 28px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+}
+
+/* Efeito ao passar o mouse sobre o botão de fechar */
+.close:hover,
+.close:focus {
+  color: black; /* Cor ao passar o mouse */
+  text-decoration: none; /* Sem sublinhado */
+  cursor: pointer; /* Cursor pointer */
+}
