@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141414; /* Cor de fundo preta */
+  color: #ffffff; /* Texto branco */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #e50914; /* Vermelho da Netflix */
+}
+
+form {
+  background-color: #333333; /* Fundo cinza escuro para o formulário */
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto; /* Centraliza o formulário */
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #e50914; /* Borda vermelha */
+  border-radius: 5px;
+  background-color: #555555; /* Fundo cinza */
+  color: #ffffff; /* Texto branco */
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+button[type="submit"] {
+  background-color: #e50914; /* Vermelho da Netflix */
+  color: #ffffff; /* Texto branco */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #f40612; /* Um tom mais claro de vermelho */
+}
+
+.back-button {
+  background-color: #333333; /* Fundo cinza escuro */
+  color: #e50914; /* Texto vermelho */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: 20px auto; /* Centraliza o botão */
+  text-decoration: none;
+  width: 100px; /* Largura fixa */
+}
+
+.back-button:hover {
+  background-color: #555555; /* Fundo cinza mais claro ao passar o mouse */
+}

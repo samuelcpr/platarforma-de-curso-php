@@ -21,7 +21,7 @@
 
     <main>
         <section class="banner">
-            <h2>Assista aos melhores cursos online!</h2>
+            <h2>Assista aos melhores Filmes online!</h2>
             <button id="watchNow">Assistir Agora</button>
         </section>
 

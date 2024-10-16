@@ -13,7 +13,7 @@ try {
     die('Erro ao conectar ao banco de dados: ' . $e->getMessage());
 }
 
-// Consultar vídeos no banco de dados, ordenados por título para "Aula X"
+// Consultar vídeos no banco de dados, ordenados por título
 $sql = "SELECT * FROM videos ORDER BY title ASC";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
@@ -85,12 +85,17 @@ $videos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             videoSource.src = video.file_path;
             videoPlayer.load();
             videoDescription.textContent = video.description;
+
+            // Reproduzir automaticamente o vídeo
+            videoPlayer.play();
         }
 
         // Função para reproduzir o próximo vídeo após o término do atual
         document.getElementById('videoPlayer').addEventListener('ended', function() {
             if (currentVideoIndex !== null && currentVideoIndex < videos.length - 1) {
                 showVideo(currentVideoIndex + 1); // Reproduzir o próximo vídeo
+            } else {
+                alert("Todos os vídeos foram reproduzidos!");
             }
         });
     </script>
