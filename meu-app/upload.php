@@ -9,19 +9,24 @@
 </head>
 
 <body>
-    <h1>Upload de Vídeo</h1>
-    <form action="process_upload.php" method="POST" enctype="multipart/form-data">
-        <label for="title">Título do Vídeo:</label><br>
-        <input type="text" name="title" required><br><br>
+    <div class="background"></div> <!-- Fundo animado -->
+    <div class="container">
+        <h1>Fazer Upload de Vídeo</h1>
+        <form action="process_upload.php" method="POST" enctype="multipart/form-data">
+            <label for="title">Título do Vídeo:</label>
+            <input type="text" name="title" required>
 
-        <label for="description">Descrição do Vídeo:</label><br>
-        <textarea name="description" required></textarea><br><br>
+            <label for="description">Descrição do Vídeo:</label>
+            <textarea name="description" required></textarea>
 
-        <label for="video">Selecione o Vídeo:</label><br>
-        <input type="file" name="video" accept="video/*" required><br><br>
+            <label for="video">Selecione o Vídeo:</label>
+            <input type="file" name="video" accept="video/*" required>
 
-        <button type="submit">Fazer Upload</button>
-    </form>
+            <button type="submit">Fazer Upload</button>
+        </form>
+    </div>
+
+    <script src="js/upload.js"></script>
 </body>
 
 </html>

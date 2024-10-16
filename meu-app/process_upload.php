@@ -15,9 +15,9 @@ try {
 
 // Verificar se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Obter dados do formulário
-    $title = $_POST['title'];
-    $description = $_POST['description'];
+    // Verificar se as chaves existem e obter dados do formulário
+    $title = isset($_POST['title']) ? $_POST['title'] : '';
+    $description = isset($_POST['description']) ? $_POST['description'] : '';
 
     // Verificar se o arquivo foi enviado sem erros
     if (isset($_FILES['video']) && $_FILES['video']['error'] == 0) {
@@ -25,8 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Definir o caminho de upload do vídeo
         $upload_dir = 'uploads/';
+
+        // Criar diretório se não existir
         if (!is_dir($upload_dir)) {
-            mkdir($upload_dir, 0777, true); // Criar diretório se não existir
+            if (!mkdir($upload_dir, 0777, true)) {
+                die('Erro ao criar diretório de upload.');
+            }
         }
 
         $video_name = basename($video['name']);
@@ -47,6 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Erro ao mover o arquivo.";
         }
     } else {
-        echo "Erro no upload do arquivo.";
+        echo "Erro no upload do arquivo: " . ($_FILES['video']['error'] ?? 'Erro desconhecido.');
     }
 }

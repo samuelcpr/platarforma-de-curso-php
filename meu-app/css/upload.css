@@ -1,65 +1,90 @@
-/* Reset básico para garantir que todos os elementos tenham margens e preenchimentos consistentes */
-* {
+/* upload.css */
+body {
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #141414; /* Fundo escuro semelhante ao Netflix */
+  color: #ffffff; /* Texto branco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Estilo do corpo da página */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Cor de fundo suave */
-  color: #333; /* Cor do texto */
-  padding: 20px; /* Espaçamento em torno do conteúdo */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(50, 50, 50, 0.8)
+  );
+  z-index: 0;
 }
 
-/* Título principal */
+.container {
+  background-color: rgba(20, 20, 20, 0.9); /* Fundo do formulário */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  z-index: 1;
+}
+
 h1 {
   text-align: center;
-  margin-bottom: 20px; /* Espaçamento abaixo do título */
-  color: #007bff; /* Cor do título */
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
-/* Estilo do formulário */
-form {
-  max-width: 600px; /* Largura máxima do formulário */
-  margin: 0 auto; /* Centraliza o formulário */
-  background-color: #fff; /* Fundo branco para o formulário */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
-}
-
-/* Estilo dos rótulos e campos do formulário */
 label {
-  display: block; /* Faz com que os rótulos ocupem toda a largura */
-  margin-bottom: 5px; /* Espaçamento abaixo dos rótulos */
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 input[type="text"],
 textarea,
 input[type="file"] {
-  width: 100%; /* Largura total para campos de entrada */
-  padding: 10px; /* Espaçamento interno */
-  margin-bottom: 20px; /* Espaçamento abaixo dos campos */
-  border: 1px solid #ccc; /* Borda suave */
-  border-radius: 4px; /* Bordas arredondadas */
-  font-size: 16px; /* Tamanho da fonte */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #333; /* Fundo dos inputs */
+  color: #ffffff; /* Texto dos inputs */
+  font-size: 14px;
 }
 
-/* Estilo do botão */
+textarea {
+  height: 100px; /* Altura do textarea */
+}
+
+input[type="file"] {
+  padding: 0; /* Remove padding do input file */
+}
+
 button {
-  background-color: #007bff; /* Cor de fundo do botão */
-  color: white; /* Cor do texto */
-  border: none; /* Sem borda */
-  padding: 10px 20px; /* Espaçamento interno do botão */
-  border-radius: 4px; /* Bordas arredondadas */
-  font-size: 16px; /* Tamanho da fonte */
-  cursor: pointer; /* Cursor pointer para indicar que é clicável */
-  transition: background-color 0.3s; /* Transição suave para o efeito hover */
+  width: 100%;
+  padding: 10px;
+  background-color: #e50914 !important; /* Cor vermelha da Netflix */
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 button:hover {
-  background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+  background-color: #f40612; /* Vermelho mais escuro ao passar o mouse */
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Container mais estreito em telas menores */
+  }
 }
