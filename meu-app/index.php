@@ -1,43 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Cursos</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <title>Login de Usuário</title>
+    <link rel="stylesheet" href="./css/admin.css">
 </head>
 
 <body>
-    <header>
-        <h1>Plataforma de Cursos</h1>
-        <nav>
-            <ul>
-                <li><a href="upload.php">Fazer Upload de Vídeo</a></li>
-                <li><a href="list_videos.php">Listar Vídeos Enviados</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="banner">
-            <h2>Assista aos melhores Filmes online!</h2>
-            <button id="watchNow">Assistir Agora</button>
-        </section>
+    <div class="container">
+        <h2>Login de Usuário</h2>
+        <form id="loginForm" action="login.php" method="POST">
+            <input type="text" id="loginUsername" name="username" placeholder="Nome de usuário" required>
+            <input type="password" id="loginPassword" name="password" placeholder="Senha" required>
+            <input type="submit" value="Login">
+        </form>
+        <div id="loginMessage" class="message"></div>
 
-        <section class="video-list">
-            <h3>Cursos Recomendados</h3>
-            <div class="video-grid" id="videoGrid">
-                <!-- Os vídeos serão gerados pelo JavaScript -->
-            </div>
-        </section>
-    </main>
+        <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
+    </div>
 
-    <footer>
-        <p>© 2024 Plataforma de Cursos. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="./js/index.js"></script>
+    <script src="./js/admin.js"></script>
 </body>
 
 </html>

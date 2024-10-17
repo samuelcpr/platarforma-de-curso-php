@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #141414; /* Fundo preto escuro */
+}
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 3% 20px 2%;
+  jusfi-content: center;
+  background-color: #ffffff; /* Fundo branco para o formulário */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra mais escura */
+}
+h2 {
+  text-align: center;
+  color: #e50914; /* Vermelho Netflix */
+}
+form {
+  margin-bottom: 20px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #333333; /* Fundo cinza escuro */
+  color: #ffffff; /* Texto branco */
+}
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #e50914; /* Vermelho Netflix */
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #b81d24; /* Vermelho mais escuro ao passar o mouse */
+}
+.message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff; /* Texto branco para as mensagens */
+}
