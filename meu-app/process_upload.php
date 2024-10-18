@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             echo "Upload e registro do vídeo realizados com sucesso!";
             echo '<link rel="stylesheet" href="css/process_upload.css">';
-            echo '<a href="index.php" class="back-button">Voltar</a>'; // Correção aqui
+            echo '<a href="upload.php" class="back-button">Voltar</a>'; // Correção aqui
         } else {
             echo "Erro ao mover o arquivo.";
         }

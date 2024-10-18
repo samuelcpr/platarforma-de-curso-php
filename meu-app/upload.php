@@ -24,7 +24,7 @@
     </form>
 
     <!-- Botão de retorno -->
-    <a href="index.php" class="back-button">Voltar</a>
+    <a href="Home.php" class="back-button">Voltar</a>
 </body>
 
 </html>

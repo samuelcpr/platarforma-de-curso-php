@@ -63,7 +63,7 @@ $videos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </video>
             <p id="videoDescription"></p>
         </div>
-        <li><a href="index.php">Voltar</a></li>
+        <li><a href="Home.php">Voltar</a></li>
     </div>
 
     <script>

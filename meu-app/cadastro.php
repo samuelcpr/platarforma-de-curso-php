@@ -19,7 +19,7 @@
         </form>
         <div id="registerMessage" class="message"></div>
 
-        <p>Já tem uma conta? <a href="login_front.php">Fazer login</a></p>
+        <p>Já tem uma conta? <a href="index.php">Fazer login</a></p>
     </div>
 
     <script src="./js/admin.js"></script>

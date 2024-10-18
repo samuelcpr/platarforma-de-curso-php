@@ -34,7 +34,7 @@
     </main>
 
     <footer>
-        <p>© 2024 Plataforma de Cursos. Todos os direitos reservados.</p>
+        <p>© 2024 Samuel/Carlos. Todos os direitos reservados.</p>
     </footer>
 
     <script src="./js/index.js"></script>
